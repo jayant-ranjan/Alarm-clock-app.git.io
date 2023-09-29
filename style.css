@@ -1,0 +1,142 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Apply flex */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(216, 159, 74);
+ 
+}
+
+/* Main Container */
+.wrapper {
+  width: 440px;
+  background: linear-gradient(
+    90deg,
+    rgb(231, 200, 90) 20%,
+    rgb(183, 156, 36) 74%
+  );
+  padding: 3em;
+  flex-direction: column;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 66px -30px rgba(0, 0, 0, 0.75);
+}
+
+
+/* Time text */
+.wrapper h1 {
+  font-size: 3rem;
+  font-weight: 1000;
+  margin: 2.5rem 0;
+  
+}
+
+/* Main content */
+.wrapper .content {
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Disable content menu */
+.wrapper .content.disable {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Hour Minute AM/PM section */
+.content .column {
+  border-radius: 5px;
+  border: 1px solid #e4e40a;
+  width: calc(100% / 3 - 6px);
+}
+
+.content .column select {
+  /* outline: none;
+  border: none; */
+  height: 50px;
+  width: 100%;
+  font-size: 1em;
+  padding-left: 10px;
+  cursor: pointer;
+  background-color: rgb(192, 173, 30);
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+/* Set Button */
+.wrapper button,
+#resumeBtn {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #041372;
+  background-color: rgb(196, 211, 22);
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+/* Click effect on button */
+.wrapper button:active,
+#resumeBtn:active {
+  background-color: rgb(136, 158, 8);
+  font-size: 1.2rem;
+  /* padding: 0.8rem 0; */
+}
+
+/* Resume button */
+#resumeBtn {
+  background-color: rgb(9, 107, 255);
+  width: 200px;
+}
+
+/* Welcome Back Screen */
+
+.welcomeBack {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(86, 145, 224);
+  background: radial-gradient(
+    circle,
+    rgba(86, 145, 224, 1) 17%,
+    rgba(0, 117, 255, 1) 73%
+  );
+  z-index: 10;
+  flex-direction: column;
+  /* display: none; */
+}
+
+.d-none {
+  display: none;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 95vw;
+  }
+
+  .welcomeBack {
+    font-size: 0.5rem;
+  }
+}
+
